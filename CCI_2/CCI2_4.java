@@ -30,7 +30,7 @@ public class CCI2_4 {
 					smaller_than_X_tail_node.next = tmp_node;
 					smaller_than_X_tail_node = tmp_node;
 				}
-				smaller_than_X_tail_node.next = null;
+				
 
 				tmp_node = tmp_pre_node.next;
 			}
@@ -42,8 +42,9 @@ public class CCI2_4 {
 
 		}
 // === Combine as One list 
-		tmp_pre_node.next = smaller_than_X_head_node;
-
+		smaller_than_X_tail_node.next = L_list.head_node;
+		L_list.head_node = smaller_than_X_head_node;
+		tmp_pre_node.next = null;
 	}
 
 }
